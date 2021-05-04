@@ -41,6 +41,38 @@
       "meta": {}
     },
     {
+      "expectation_type": "expect_column_kl_divergence_to_be_less_than",
+      "kwargs": {
+        "column": "pay_doc_type",
+        "partition_object": {
+          "values": [
+            "MASTER",
+            "MIR",
+            "VISA"
+          ],
+          "weights": [
+            0.322,
+            0.343,
+            0.335
+          ]
+        },
+        "threshold": 0.45
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_distinct_values_to_equal_set",
+      "kwargs": {
+        "column": "pay_doc_type",
+        "value_set": [
+          "MASTER",
+          "MIR",
+          "VISA"
+        ]
+      },
+      "meta": {}
+    },
+    {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "user_id"
@@ -69,9 +101,27 @@
       "meta": {}
     },
     {
+      "expectation_type": "expect_column_value_lengths_to_be_between",
+      "kwargs": {
+        "column": "phone",
+        "max_value": 12,
+        "min_value": 10
+      },
+      "meta": {}
+    },
+    {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "billing_period"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_value_lengths_to_be_between",
+      "kwargs": {
+        "column": "billing_period",
+        "max_value": 7,
+        "min_value": 6
       },
       "meta": {}
     },
@@ -86,68 +136,6 @@
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "sum"
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_distinct_values_to_be_in_set",
-      "kwargs": {
-        "column": "pay_doc_type",
-        "value_set": [
-          "MASTER",
-          "MIR",
-          "VISA"
-        ]
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_value_lengths_to_be_between",
-      "kwargs": {
-        "column": "phone",
-        "max_value": 12,
-        "min_value": 10
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_kl_divergence_to_be_less_than",
-      "kwargs": {
-        "column": "pay_doc_type",
-        "partition_object": {
-          "values": [
-            "MASTER",
-            "MIR",
-            "VISA"
-          ],
-          "weights": [
-            0.322,
-            0.343,
-            0.335
-          ]
-        },
-        "threshold": 0.6
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_distinct_values_to_equal_set",
-      "kwargs": {
-        "column": "pay_doc_type",
-        "value_set": [
-          "MASTER",
-          "MIR",
-          "VISA"
-        ]
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_value_lengths_to_be_between",
-      "kwargs": {
-        "column": "billing_period",
-        "max_value": 7,
-        "min_value": 6
       },
       "meta": {}
     },
